@@ -26,21 +26,21 @@ const FormUserDetails = (props) => {
           helperText="Enter Your First Name"
           label="First Name"
           onChange={props.handleChange('firstName')}
-          defaultValue={props.allInputs}
+          defaultValue={props.setAllInputs}
         />
         <br/>
         <TextField
           helperText="Enter Your Last Name"
           label="First Name"
           onChange={props.handleChange('firstName')}
-          defaultValue={props.allInputs}
+          defaultValue={props.setAllInputs}
         />
         <br/>
         <TextField
           helperText="Enter Your First Name"
           label="First Name"
           onChange={props.handleChange('firstName')}
-          defaultValue={props.allInputs}
+          defaultValue={props.setAllInputs}
         />
       </React.Fragment>
     </ThemeProvider>
