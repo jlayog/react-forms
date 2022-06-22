@@ -23,9 +23,9 @@ const UserForm = () => {
     setStep(step - 1)
   }
   
-  const handleChange = (e) => {
+  const handleChange = (propertyName, value) => {
     setAllInputs( prevInputs => {
-      return { ...prevInputs, [e.target.name]: e.target.value }
+      return { ...prevInputs, [propertyName]: value }
     })
   }
 
@@ -36,7 +36,7 @@ const UserForm = () => {
           <FormUserDetails 
           nextStep={nextStep}
           handleChange={handleChange}
-          setAllInputs={setAllInputs}
+          allInputs={allInputs}
           />
         </div>
       );
