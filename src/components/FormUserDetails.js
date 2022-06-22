@@ -28,7 +28,7 @@ const FormUserDetails = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <React.Fragment>
-        {/* AppBar does not take the   */}
+        {/* AppBar must have content within it to display */}
         <AppBar position="static">
           <h2>Enter User Details</h2>
         </AppBar>
