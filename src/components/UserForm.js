@@ -54,16 +54,18 @@ const UserForm = () => {
     case 3: 
       return (
         <div>
-          <Confirm />
+          <Confirm 
+            nextStep={nextStep}
+            allInputs={allInputs}
+            prevStep={prevStep}
+          />
         </div>
-        
       );
     default: 
       return (
         <div>
           <Success />
         </div>
-        
       );   
     }
 }
