@@ -34,16 +34,21 @@ const UserForm = () => {
       return (
         <div>
           <FormUserDetails 
-          nextStep={nextStep}
-          handleChange={handleChange}
-          allInputs={allInputs}
+            nextStep={nextStep}
+            handleChange={handleChange}
+            allInputs={allInputs}
           />
         </div>
       );
     case 2: 
       return (
         <div>
-          <FormPersonalDetails />
+          <FormPersonalDetails 
+            nextStep={nextStep}
+            handleChange={handleChange}
+            allInputs={allInputs}
+            prevStep={prevStep}
+          />
         </div>
       );
     case 3: 

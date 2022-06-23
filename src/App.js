@@ -1,4 +1,5 @@
 import './App.css';
+import StepButton from './components/StepButton';
 import UserForm from './components/UserForm';
 
 function App() {
