@@ -5,6 +5,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
 import Container from '@mui/material/Container';
+import { FormControl } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -16,6 +17,7 @@ const theme = createTheme({
       main: '#f50057',
     },
   },
+
 });
 
 const FormPersonalDetails = (props) => {
@@ -27,7 +29,7 @@ const FormPersonalDetails = (props) => {
   const handlePrev = (e) => {
     e.preventDefault();
     props.prevStep();
-}
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -37,8 +39,8 @@ const FormPersonalDetails = (props) => {
         </AppBar>
         <Container 
           sx={{
-            mt: 4,
-            '& .MuiTextField-root': { m: 1, width: '25ch' },
+            '& .MuiTextField-root': { m: 1, mt: 4},
+            '& .MuiInput-underline': { mr: 10}
           }} 
           spacing={5} 
           component="form"
@@ -52,7 +54,6 @@ const FormPersonalDetails = (props) => {
             defaultValue={props.allInputs.occupation}
             variant="standard"
           />
-          <br/>
           <TextField
             helperText="Enter Your City"
             label="City"
@@ -61,14 +62,16 @@ const FormPersonalDetails = (props) => {
             variant="standard"
           />
           <br/>
-          <TextField
-            helperText="Enter Your Bio"
-            label="Bio"
-            onChange={(e) => props.handleChange('bio', e.target.value)}
-            defaultValue={props.allInputs.bio}
-            multiline
-            rows={4}
-          />
+          <FormControl fullWidth sx={{ width:"70ch" }} variant="standard">
+            <TextField
+              helperText="Enter Your Bio"
+              label="Bio"
+              onChange={(e) => props.handleChange('bio', e.target.value)}
+              defaultValue={props.allInputs.bio}
+              multiline
+              rows={6}
+            />
+          </FormControl>
           <br/>
           <Button 
             onClick={handlePrev}
