@@ -18,7 +18,6 @@ const theme = createTheme({
   },
 });
 
-// Let's destructure the state passed to this component
 const FormUserDetails = (props) => {
   const handleContinue = (e) => {
     e.preventDefault();
@@ -64,6 +63,13 @@ const FormUserDetails = (props) => {
               m: 1
             }}
           />
+          <br/>
+          <Button 
+            onClick={handleContinue}
+            variant="contained"
+            >
+              Continue
+          </Button>
         </Container>
       </React.Fragment>
     </ThemeProvider>
