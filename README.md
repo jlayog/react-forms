@@ -1,4 +1,4 @@
-# React Forms Application
+# Basic React Forms Application
 
 This project was to demonstrate the use of state, passing of props, handle user information, and forms.
 
